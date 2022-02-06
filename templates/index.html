@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estate Price Predictor</title>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>Estate Price Predictor</h1>
+            <!-- Main Input For Reciving Query to our ML -->
+            <form action="{{ url_for('predict')}}" method="post">
+                <input type="text" name="CRIM" placeholder="Enter Crime Rate" required="required" />
+                <input type="text" name="ZN" placeholder="Enter ZN" required="required" />
+                <input type="text" name="INDUS" placeholder="Enter INDUS" required="required" />
+                <input type="text" name="CHAS" placeholder="Enter CHAS" required="required" />
+                <input type="text" name="NOX" placeholder="Enter NOX" required="required" />
+                <input type="text" name="RM" placeholder="Enter AGE" required="required" />
+                <input type="text" name="AGE" placeholder="Enter AGE" required="required" />
+                <input type="text" name="DIS" placeholder="Enter DIS" required="required" />
+                <input type="text" name="RAD" placeholder="Enter RAD" required="required" />
+                <input type="text" name="TAX" placeholder="Enter TAX" required="required" />
+                <input type="text" name="PTRATIO" placeholder="Enter PTRATIO" required="required" />
+                <input type="text" name="B" placeholder="Enter B" required="required" />
+                <input type="text" name="LSTAT" placeholder="Enter LSTAT" required="required" />
+    
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+        </center>
+
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
